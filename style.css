@@ -1,5 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #81cac7;
+    --link-color: #234a66;
+    --link-hover-color: #d9efec;
+    --color-4: antiquewhite;
+    --color-5: #3e3e3e;
+    --primary-font: 'Acme', cursive;
+    --secondary-font: 'Roboto', sans-serif;
+    --main-text-color: #3e3e3e;
+    --white-space: 1rem;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: "logo logo logo"
+        "nav content content"
+        "footer footer footer";
+
+}
+
+.logo {
+    grid-area: logo;
+    background-color: hotpink;
+
+
+}
+
+nav {
+    grid-area: nav;
+    background-color: var(--bg-color);
+
+}
+.logo{
+   text-align: center;
+}
+
+.logo img {
+    width: 5vw;
+    height: auto;
+
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    position:fixed;
+    display: inline-block;
+    font-family: var(--primary-font);
+    color: var(--main text color);
+}
+
+main {
+    grid-area: content;
+}
+
+footer {
+    grid-area: footer;
+    background-color: antiquewhite;
+}
+
+
+
+nav ul li {
+    font-family: var(--primary-font);
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+    margin: var(--white-space) 0;
 }
