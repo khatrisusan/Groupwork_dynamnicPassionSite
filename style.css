@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+-    box-sizing: border-box;
 }
 
 :root {
@@ -77,4 +77,11 @@ nav ul li {
     color: rgba(255, 255, 255, 0.95);
     font-weight: bold;
     margin: var(--white-space) 0;
+}
+.img{
+    text-align: center;
+}
+.image img{
+    width:600px;
+    height: auto;
 }
