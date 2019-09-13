@@ -13,6 +13,9 @@ function showList(data) {
     console.log(data);
     const template = document.querySelector("template").content;
     const myCopy = template.cloneNode("true");
-    myCopy.querySelector("h1").textContent = data.gsx$recipe.$t;
+    myCopy.querySelector("article.image img").src = "image/" + data.gsx$imagename.$t;
+
     document.querySelector("main").appendChild(myCopy);
 }
+
+
