@@ -13,6 +13,7 @@ function showList(data) {
     console.log(data);
     const template = document.querySelector("template").content;
     const myCopy = template.cloneNode("true");
-    myCopy.querySelector("h1").textContent = data.gsx$recipe.$t;
+    myCopy.querySelector(".category-name h1").textContent = data.gsx$dishtitle.$t;
+    myCopy.querySelector(".image img").src = "image/" + data.gsx$imagename.$t;
     document.querySelector("main").appendChild(myCopy);
 }
