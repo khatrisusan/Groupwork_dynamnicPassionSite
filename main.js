@@ -15,14 +15,8 @@ function showList(data) {
     const myCopy = template.cloneNode("true");
     const section = document.createElement("section");
     section.setAttribute("id", data.gsx$categorymeal.$t);
-     document.querySelector("main").appendChild(section);
+    document.querySelector("main").appendChild(section);
     myCopy.querySelector("h1").textContent = data.gsx$dishtitle.$t;
     myCopy.querySelector("article.image img").src = "image/" + data.gsx$imagename.$t;
     document.querySelector("main").appendChild(myCopy);
 }
-
-
-
-
-
-
