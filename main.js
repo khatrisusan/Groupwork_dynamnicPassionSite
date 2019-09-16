@@ -17,6 +17,6 @@ function showList(data) {
     section.setAttribute("id", data.gsx$categorymeal.$t);
     document.querySelector("main").appendChild(section);
     myCopy.querySelector("h1").textContent = data.gsx$dishtitle.$t;
-    myCopy.querySelector("article.image img").src = "image/" + data.gsx$imagename.$t;
+    myCopy.querySelector("img").src = "image/" + data.gsx$imagename.$t;
     document.querySelector("main").appendChild(myCopy);
 }
