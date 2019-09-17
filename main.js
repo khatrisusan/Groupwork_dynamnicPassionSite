@@ -17,7 +17,7 @@ function getData(data) {
 
 function showList(data) {
     console.log(data);
-    const template = document.querySelector("template").content;
+    const template = document.querySelector("template.one").content;
     const myCopy = template.cloneNode("true");
     const section = document.createElement("section");
     section.setAttribute("id", data.gsx$categorymeal.$t);
@@ -28,6 +28,34 @@ function showList(data) {
 }
 
 
+//document.querySelector("main").innerHTML
+
+function myFunction() {
+ const secondFetch =
+    "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
+const endpoint2 = `https://spreadsheets.google.com/feeds/list/${secondFetch}/od6/public/values?alt=json`
+
+fetch(endpoint2).then(res => res.json()).then(rawData);
+console.log(rawData);
+
+function rawData(raw) {
+    const myArray = raw.feed.entry;
+    myArray.forEach(showSheet);
+}
+
+function showSheet(raw) {
+    console.log(raw);
+    const clone = document.querySelector("template.two").content;
+    const cloneData = clone.cloneNode("true");
+    cloneData.querySelector("p.description1").textContent = raw.gsx$outfitdescription1.$t;
+
+    cloneData.querySelector("img.img1").src = "image/" + raw.gsx$scrambledeggfashionimage.$t;
+
+    document.querySelector("main").appendChild(cloneData);
+}
+
+
+}
 
 
 
