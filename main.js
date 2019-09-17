@@ -1,3 +1,9 @@
+/*
+==========================================
+JS for Dynamic Home Page
+==========================================
+*/
+
 const spreadsheetID =
     "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
 const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/od6/public/values?alt=json`
@@ -20,3 +26,15 @@ function showList(data) {
     myCopy.querySelector("img").src = "image/" + data.gsx$imagename.$t;
     document.querySelector("main").appendChild(myCopy);
 }
+
+
+
+
+
+
+
+
+
+
+
+

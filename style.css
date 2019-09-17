@@ -109,6 +109,20 @@ nav ul li {
     padding-right: 6vw;
 }
 
+ul li a {
+    text-decoration: none;
+}
+
+ul li a:hover {
+    font-size: 1.5vw;
+    transition: 0.4s ease;
+}
+
+ul li a.active {
+    font-size: 1.5vw;
+    text-decoration: underline;
+}
+
 nav ul li:first-child {
     margin-top: 10vh;
 }
@@ -158,16 +172,20 @@ aside {
 
 
 
-img.img1,img.img2,img.img3
-    {
+img.img1,
+img.img2,
+img.img3 {
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-p.description1,p.description2,p.description3{
-        color: var(--main text color);
+
+p.description1,
+p.description2,
+p.description3 {
+    color: var(--main text color);
     font-family: "Abril Fatface";
     font-size: 1.5vw;
     text-align: center;
