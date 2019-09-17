@@ -8,6 +8,11 @@ html {
     scroll-behavior: smooth;
 }
 
+/*
+==========================================
+STYLING FOR INDEX PAGE
+==========================================
+*/
 :root {
     --bg-color: white;
     --link-color: #234a66;
@@ -20,18 +25,18 @@ html {
     --white-space: 1rem;
 }
 
-body {
+
+
+.indexWrapper {
     display: grid;
-    grid-template-columns: 1fr a9fr;
+    grid-template-columns: 1fr 9fr;
     grid-template-rows: 1fr auto 1fr;
     grid-template-areas: "header header header"
         "nav content content"
         "footer footer footer";
 }
 
-h1 {
-    padding: 0;
-}
+
 
 .productlist {
     grid-area: content;
@@ -66,12 +71,14 @@ nav {
 }
 
 h1.food_name {
-        color: var(--main text color);
+    color: var(--main text color);
     font-family: "Abril Fatface";
+    font-size: 3vw;
     text-align: center;
+    margin-top: 8vw;
 }
 
-img {
+img.indeximg {
     width: 60vw;
     height: auto;
     display: block;
@@ -84,7 +91,6 @@ img {
     display: grid;
     grid-area: content;
     text-align: center;
-    grid-area: content;
 }
 
 footer {
@@ -105,4 +111,65 @@ nav ul li {
 
 nav ul li:first-child {
     margin-top: 10vh;
+}
+
+
+/*
+==========================================
+STYLING FOR MAIN PAGE
+==========================================
+*/
+div.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas: "header header"
+        "nav aside"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: aside;
+}
+
+
+footer {
+    grid-area: footer;
+}
+
+/*
+==========================================
+styling for aside section
+==========================================
+*/
+aside {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1vw;
+}
+
+
+
+img.img1,img.img2,img.img3
+    {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+p.description1,p.description2,p.description3{
+        color: var(--main text color);
+    font-family: "Abril Fatface";
+    font-size: 1.5vw;
+    text-align: center;
+    margin-top: 8vw;
 }
