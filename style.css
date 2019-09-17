@@ -5,7 +5,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -24,13 +24,31 @@ body {
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: 10% 80% 10%;
-    grid-template-areas: "header header header"
+    grid-template-areas:
+        "header header header"
         "nav content content"
         "footer footer footer";
 }
 
+img .pancakes {
+    width: 100px;
+    height: 50px;
+    float: left;
+}
+
 h1 {
     padding: 0;
+    font-family: var(--primary-font);
+}
+
+h2 {
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: flex-end;
+    font-family: var(--primary-font);
+    font-weight: 100;
 }
 
 .productlist {
@@ -65,14 +83,14 @@ nav {
 }
 
 .productlist {
-  padding-top: 100px;
-  display: grid;
-  max-width: 1200px;
-  margin: auto;
-  grid-gap: 60px;
-  margin-bottom: 60px;
-  text-align: center;
-  grid-area: content;
+    padding-top: 100px;
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-gap: 60px;
+    margin-bottom: 60px;
+    text-align: center;
+    grid-area: content;
 }
 
 .productbody {
@@ -97,4 +115,14 @@ nav ul li {
 
 nav ul li:first-child {
     margin-top: 70px;
+}
+
+/* RESPONSIVE HOME PAGE */
+
+@media screen and (max-width: 600px) {
+    .main.productlist {
+        display: grid;
+        max-width: 100%;
+        grid-template-areas: "header" "content" "footer";
+    }
 }
