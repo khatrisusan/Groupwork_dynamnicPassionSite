@@ -1,3 +1,9 @@
+/*
+==========================================
+JS for Dynamic Home Page
+==========================================
+*/
+
 const spreadsheetID =
     "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
 const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/od6/public/values?alt=json`
@@ -14,11 +20,18 @@ function showList(data) {
     const template = document.querySelector("template").content;
     const myCopy = template.cloneNode("true");
     const section = document.createElement("section");
-    section.setAttribute("id", data);
+    section.setAttribute("id", data.gsx$categorymeal.$t);
+    document.querySelector("main").appendChild(section);
     myCopy.querySelector("h1").textContent = data.gsx$dishtitle.$t;
-    myCopy.querySelector("article.image img").src = "image/" + data.gsx$imagename.$t;
+    myCopy.querySelector("img").src = "image/" + data.gsx$imagename.$t;
     document.querySelector("main").appendChild(myCopy);
 }
+
+
+
+
+
+
 
 
 
