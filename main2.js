@@ -1,35 +1,49 @@
 /*
 ==========================================
-JS FOR DYNAMIC FOOD PAGE
+JS FOR DYNAMIC MAIN PAGE
 ==========================================
 */
-const secondFetch =
-    "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
-const endpoint2 = `https://spreadsheets.google.com/feeds/list/${secondFetch}/od6/public/values?alt=json`
 
-fetch(endpoint2).then(res => res.json()).then(rawData);
+let urlParamas = new URLSearchParams(window.location.search);
+let id = urlParamas.get("id");
+console.log(id);
+
+const Fetch =
+    "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
+const endpoint = `https://spreadsheets.google.com/feeds/list/${Fetch}/od6/public/values?alt=json`
+
+fetch(endpoint).then(res => res.json()).then(rawData);
 console.log(rawData);
 
-function rawData(raw) {
-    const myArray = raw.feed.entry;
+function rawData(data) {
+    const myArray = data.feed.entry;
     myArray.forEach(showSheet);
+
+    console.log(myArray);
 }
 
-function showSheet(raw) {
-    console.log(raw);
-    const clone = document.querySelector("template").content;
-    const cloneData = clone.cloneNode("true");
-    cloneData.querySelector("p.description1").textContent = raw.gsx$outfitdescription1.$t;
-   // cloneData.querySelector("p.description2").textContent = raw.gsx$outfitdescription2.$t;
-   // cloneData.querySelector("p.description3").textContent = raw.gsx$outfitdescription3.$t;
-    cloneData.querySelector("img.img1").src = "image/" + raw.gsx$scrambledeggfashionimage.$t;
-    //raw.gsx$outfitdescription3.$t;
-    //cloneData.querySelector("img.img2").src = "image/" + raw.gsx$scrambledeggfashionimage.$t;
+function showSheet(data) {
+    console.log(data);
+    const clone = document.querySelector("template.two").content;
+        const cloneData = clone.cloneNode("true");
 
-    //raw.gsx$outfitdescription3.$t;
-    //cloneData.querySelector("img.img3").src = "image/" + raw.gsx$scrambledeggfashionimage.$t;
+    if(data.gsx$dishtitle.$t == id) {
+        console.log("yes");
+    cloneData.querySelector("p.description1").textContent = data.gsx$outfitdescription1.$t;
+   // cloneData.querySelector("p.description2").textContent = data.gsx$outfitdescription2.$t;
+   // cloneData.querySelector("p.description3").textContent = data.gsx$outfitdescription3.$t;
+    cloneData.querySelector("img.img1").src = "image/" + data.gsx$scrambledeggfashionimage1.$t;
+        cloneData.querySelector("img.img2").src = "image/" + data.gsx$scrambledeggfashionimage2.$t;
+          cloneData.querySelector("img.img3").src = "image/" + data.gsx$scrambledeggfashionimage3.$t;
+    //data.gsx$outfitdescription3.$t;
+    //cloneData.querySelector("img.img2").src = "image/" + data.gsx$scrambledeggfashionimage.$t;
 
-    document.querySelector("aside").appendChild(cloneData);
+    //data.gsx$outfitdescription3.$t;
+    //cloneData.querySelector("img.img3").src = "image/" + data.gsx$scrambledeggfashionimage.$t;
+  document.querySelector("aside").appendChild(cloneData)
+
+            }
+
 }
 
 

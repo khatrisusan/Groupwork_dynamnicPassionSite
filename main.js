@@ -15,27 +15,44 @@ fetch(endpoint).then(res => res.json()).then(getData);
 
 function getData(data) {
     const myArray = data.feed.entry;
+    console.log( myArray);
+    myArray.length = 4;
     myArray.forEach(showList)
 }
 
 function showList(data) {
-    //console.log(data);
+
+    console.log(data);
     const template = document.querySelector("template.one").content;
     const myCopy = template.cloneNode("true");
     const section = document.createElement("section");
     section.setAttribute("id", data.gsx$categorymeal.$t);
     document.querySelector("main").appendChild(section);
-
-    const wrapper = document.createElement("section");
-    section.setAttribute("id","wrapper");
-    document.querySelector("main").appendChild(wrapper);
-
-
     myCopy.querySelector("h1").textContent = data.gsx$dishtitle.$t;
     myCopy.querySelector("img").src = "image/" + data.gsx$imagename.$t;
+    myCopy.querySelector("img").setAttribute("dishId", data.gsx$dishtitle.$t);
+    console.log(data);
     document.querySelector("main").appendChild(myCopy);
+
+
+    document.querySelectorAll(".indeximg").forEach(image =>{
+        image.addEventListener("click", showDish);
+    });
 }
 
+function showDish(event) {
+let id = event.target.getAttribute("dishId");
+    console.log(id);
+    location.href = "main.html?id=" + id;
+}
+
+/*
+==========================================
+JS for Dynamic Home Page
+==========================================
+*/
+
+/*
 
 //document.querySelector("main").innerHTML
 
@@ -80,3 +97,4 @@ function showSheet(raw) {
 
 
 
+*/
