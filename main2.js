@@ -28,13 +28,13 @@ function showSheet(data) {
         const cloneData = clone.cloneNode("true");
 
     if(data.gsx$dishtitle.$t == id) {
-        console.log("yes");
+        //console.log("yes");
     cloneData.querySelector("p.description1").textContent = data.gsx$outfitdescription1.$t;
-   // cloneData.querySelector("p.description2").textContent = data.gsx$outfitdescription2.$t;
-   // cloneData.querySelector("p.description3").textContent = data.gsx$outfitdescription3.$t;
-    cloneData.querySelector("img.img1").src = "image/" + data.gsx$scrambledeggfashionimage1.$t;
-        cloneData.querySelector("img.img2").src = "image/" + data.gsx$scrambledeggfashionimage2.$t;
-          cloneData.querySelector("img.img3").src = "image/" + data.gsx$scrambledeggfashionimage3.$t;
+   cloneData.querySelector("p.description2").textContent = data.gsx$outfitdescription2.$t;
+    cloneData.querySelector("p.description3").textContent = data.gsx$outfitdescription3.$t;
+    cloneData.querySelector("img.img1").src = "image/" + data.gsx$fashionimage1.$t;
+        cloneData.querySelector("img.img2").src = "image/" + data.gsx$fashionimage2.$t;
+          cloneData.querySelector("img.img3").src = "image/" + data.gsx$fashionimage3.$t;
     //data.gsx$outfitdescription3.$t;
     //cloneData.querySelector("img.img2").src = "image/" + data.gsx$scrambledeggfashionimage.$t;
 
