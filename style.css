@@ -73,14 +73,18 @@ nav {
     font-family: "Abril Fatface";
     text-align: center;
     z-index: 5;
+    color: #000;
 }
 
 h1.food_name {
     color: var(--main text color);
-    font-family: "Abril Fatface";
+    font-family: "Courier";
     font-size: 3vw;
     text-align: center;
     margin-top: 8vw;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: 200;
 }
 
 img.indeximg {
@@ -210,7 +214,7 @@ p.description3 {
     color: var(--main text color);
     font-family: "Courier";
     font-size: 13px;
-    text-align: center;
+    text-align: justify;
     margin: 4vw 8vw 8vw;
 }
 
@@ -239,3 +243,4 @@ p.dish-description {
     text-transform: capitalize;
     margin: 6vw;
 }
+
