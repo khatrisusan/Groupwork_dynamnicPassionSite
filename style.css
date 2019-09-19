@@ -65,7 +65,7 @@ nav {
 .header h1 {
     font-size: 35px;
     margin-top: 30px;
-    margin-left: 45px;
+    margin-left: 55px;
     position: fixed;
     display: flex;
     color: var(--main text color);
@@ -78,7 +78,7 @@ nav {
 h2 {
     grid-area: header;
     padding-top: 70px;
-    padding-left: 45px;
+    padding-left: 55px;
     font-family: "Courier";
     font-weight: 100;
     font-style: italic;
@@ -133,7 +133,7 @@ nav ul li {
     color: #000;
     margin: var(--white-space) 0;
     text-transform: lowercase;
-    padding-left: 47px;
+    padding-left: 55px;
     padding-right: 60px;
 }
 
@@ -213,8 +213,8 @@ p.description3 {
     font-family: "Courier";
     font-size: 15px;
     text-align: justify;
-    margin: 4vw 8vw 8vw;
-    text-indent: 30px
+    margin: 4vw 15vw 8vw 15vw;
+    text-indent: 30px;
 }
 
 p.recipe {
@@ -252,9 +252,9 @@ p.dish-description {
     margin: 6vw;
     grid-area: noun;
     text-align: justify;
-    margin-bottom: 8vw;
     font-size: 15px;
-    text-indent: 30px;
+    margin-bottom: 15vw;
+    margin-top: 3vw;
 }
 
 .grid {
@@ -314,7 +314,7 @@ p.recipe {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: black;
   margin: 50px;
   padding: 50px 50px 150px 50px;
   font-family: "Courier";
@@ -333,13 +333,24 @@ button {
     font-weight: 600;
     font-size: 13px;
     margin-bottom: 100px;
+    cursor: pointer;
 }
 
-h2.rating-text {
+p.rating-text {
     font-style: normal;
     font-size: 14px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    font-family: "Courier";
+    text-align: center;
+    padding-right: 160px;
+    padding-left: 160px;
+    color: white;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+    counter-reset: rateme 0;
 }
 
 .star {
@@ -348,18 +359,27 @@ h2.rating-text {
     padding: 0 1rem; /* space out the stars */
 }
 
+star.rated {
+    counter-increment: rateme 1;
+}
+
+stars::after {
+    content: counter(rateme) "/5';
+}
+
 .star::before {
-    content: '\2605';
+    /* star outline */
+    content: '\2606';
     cursor: pointer;
 }
 
 .star:hover::before {
-    /* the :hover should come first */
-    content: '\2605';
+    /* the style for a selected star */
+    content: '\2606';
     color: dimgrey;
 }
 
 .star.rated::before {
     /* same here */
-    content: '\2605';
+    content: '\2605'; /* filled star */
 }
