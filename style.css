@@ -77,10 +77,13 @@ nav {
 
 h1.food_name {
     color: var(--main text color);
-    font-family: "Abril Fatface";
     font-size: 3vw;
     text-align: center;
     margin-top: 8vw;
+    font-family: "Courier";
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 img.indeximg {
@@ -165,6 +168,8 @@ aside {
 
 footer {
     grid-area: footer;
+    margin-top: 20px;
+    font-size: 13px;
 }
 
 /*
@@ -186,6 +191,7 @@ img.dishimg {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 
 img.img1,
@@ -204,7 +210,7 @@ p.description3 {
     color: var(--main text color);
     font-family: "Courier";
     font-size: 13px;
-    text-align: center;
+    text-align: justify;
     margin: 4vw 8vw 8vw;
 }
 
@@ -220,6 +226,7 @@ p.rating2,
 p.rating3 {
     margin-bottom: 4vw;
     font-family: "Courier";
+    text-align: center;
 }
 
 p.author,
@@ -232,6 +239,7 @@ p.dish-description {
     font-family: "Courier";
     text-transform: capitalize;
     margin: 6vw;
+    text-align: justify;
 }
 
 .grid {
@@ -254,7 +262,7 @@ img.dishimg {
 
 h1.dish-title {
     grid-area: title;
-    padding-top: 7vw;
+    padding-top: 10vw;
 }
 
 p.date {
