@@ -29,9 +29,10 @@ function showSheet(data) {
 
     if (data.gsx$dishtitle.$t == id) {
         //console.log("yes");
+        cloneData.querySelector("img.dishimg").src = "image/" + data.gsx$imagename.$t;
         cloneData.querySelector("h1.dish-title").textContent = data.gsx$dishtitle.$t;
         cloneData.querySelector("p.recipe").textContent = data.gsx$recipe.$t;
-        cloneData.querySelector("p.author").textContent = data.gsx$author.$t;
+        cloneData.querySelector("p.author").textContent = `Outfit Credit: ${ data.gsx$author.$t }`;
         cloneData.querySelector("p.date").textContent = data.gsx$date.$t;
         cloneData.querySelector("p.rating1").textContent = data.gsx$rating1.$t;
         cloneData.querySelector("p.rating2").textContent = data.gsx$rating2.$t;
