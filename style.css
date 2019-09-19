@@ -204,9 +204,10 @@ p.description2,
 p.description3 {
     color: var(--main text color);
     font-family: "Courier";
-    font-size: 13px;
+    font-size: 15px;
     text-align: justify;
     margin: 4vw 8vw 8vw;
+    text-indent: 30px
 }
 
 p.recipe {
@@ -235,23 +236,25 @@ p.noun {
     font-family: "Courier";
     font-size: 15px;
     text-align: justify;
-    margin: 6vw;
+    margin: 0;
+    padding-right: 6vw;
 }
 
 p.dish-description {
     font-family: "Courier";
-    text-transform: capitalize;
     margin: 6vw;
+    grid-area: noun;
     text-align: justify;
     margin-bottom: 8vw;
-    font-size: 13px;
+    font-size: 15px;
+    text-indent: 30px;
 }
 
 .grid {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr .5fr 1fr;
     grid-auto-columns: 1fr 1fr;
-    grid-template-areas: "img title"
+    grid-template-areas: "img title" "img noun"
         "img recipe";
     grid-row-gap: 1rem;
 }
@@ -263,14 +266,13 @@ img.dishimg {
     grid-area: img;
 }
 
-
 h1.dish-title {
     grid-area: title;
     font-family: "Courier";
     font-weight: 200;
     text-transform: uppercase;
     padding-top: 6vw;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 p.date {
