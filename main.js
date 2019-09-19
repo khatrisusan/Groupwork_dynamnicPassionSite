@@ -4,24 +4,23 @@ JS for Dynamic Home Page
 ==========================================
 */
 
+const spreadsheetID = "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
+const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/od6/public/values?alt=json`;
 
-const spreadsheetID =
-    "11uCM4X1aMt_7X0s6qUkZyXIoopkTqrTyISDarVU6kQ0";
-const endpoint = `https://spreadsheets.google.com/feeds/list/${spreadsheetID}/od6/public/values?alt=json`
+var docFragment = document.createElement("section");
 
-var docFragment = document.createElement('section');
-
-fetch(endpoint).then(res => res.json()).then(getData);
+fetch(endpoint)
+    .then(res => res.json())
+    .then(getData);
 
 function getData(data) {
     const myArray = data.feed.entry;
-    console.log( myArray);
+    console.log(myArray);
     myArray.length = 4;
-    myArray.forEach(showList)
+    myArray.forEach(showList);
 }
 
 function showList(data) {
-
     console.log(data);
     const template = document.querySelector("template.one").content;
     const myCopy = template.cloneNode("true");
@@ -34,14 +33,13 @@ function showList(data) {
     console.log(data);
     document.querySelector("main").appendChild(myCopy);
 
-
-    document.querySelectorAll(".indeximg").forEach(image =>{
+    document.querySelectorAll(".indeximg").forEach(image => {
         image.addEventListener("click", showDish);
     });
 }
 
 function showDish(event) {
-let id = event.target.getAttribute("dishId");
+    let id = event.target.getAttribute("dishId");
     console.log(id);
     location.href = "main.html?id=" + id;
 }
