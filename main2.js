@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     let rating = parseInt(
-        document.querySelector(".stars").getAttribute("data-rating")
-    );
+        document.querySelector(".stars").getAttribute("data-rating"));
     let target = stars[rating - 1];
     target.dispatchEvent(new MouseEvent("click"));
 });

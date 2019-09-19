@@ -375,8 +375,8 @@ stars::after {
 
 .star:hover::before {
     /* the style for a selected star */
-    content: '\2606';
-    color: dimgrey;
+    content: '\2605';
+    color: black;
 }
 
 .star.rated::before {
