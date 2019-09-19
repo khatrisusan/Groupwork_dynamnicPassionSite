@@ -263,7 +263,10 @@ img.dishimg {
 
 h1.dish-title {
     grid-area: title;
-    padding-top: 10vw;
+    padding-top: 9vw;
+    font-family: "Courier";
+    font-weight: 200;
+    text-transform: uppercase;
 }
 
 p.date {
