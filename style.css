@@ -42,7 +42,6 @@ STYLING FOR INDEX PAGE
 }
 
 
-
 .productlist {
     grid-area: content;
     display: grid;
@@ -59,14 +58,14 @@ STYLING FOR INDEX PAGE
 nav {
     grid-area: nav;
     background-color: transparent;
-    padding-top: 5vw;
+    padding-top: 50px;
     position: fixed;
 }
 
 .header h1 {
-    font-size: 2rem;
-    margin-top: 3vw;
-    margin-left: 5vw;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: 45px;
     position: fixed;
     display: flex;
     color: var(--main text color);
@@ -76,6 +75,20 @@ nav {
     color: black;
 }
 
+h2 {
+    grid-area: header;
+    padding-top: 70px;
+    padding-left: 45px;
+    font-family: "Courier";
+    font-weight: 100;
+    font-style: italic;
+    font-size: 17px;
+    z-index: 5;
+    display: flex;
+    position: fixed;
+}
+
+
 h1.food_name {
     color: var(--main text color);
     font-size: 3vw;
@@ -84,15 +97,14 @@ h1.food_name {
     font-weight: 200;
     text-transform: uppercase;
     margin-bottom: 3vw;
+    display: none;
 }
 
 img.indeximg {
     width: 50vw;
     height: auto;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 18vw;
+    margin: 8vw auto 18vw auto;
 }
 
 img.indeximg:hover {
@@ -117,12 +129,12 @@ footer {
 
 nav ul li {
     font-family: var(--primary-font);
-    font-size: 1.3vw;
+    font-size: 13px;
     color: #000;
     margin: var(--white-space) 0;
     text-transform: lowercase;
-    padding-left: 6vw;
-    padding-right: 6vw;
+    padding-left: 47px;
+    padding-right: 60px;
 }
 
 ul li a {
@@ -131,13 +143,8 @@ ul li a {
 }
 
 ul li a:hover {
-    font-size: 1.7vw;
+    font-size: 17px;
     transition: 0.4s ease;
-}
-
-ul li a.active {
-    font-size: 1.5vw;
-    text-decoration: underline;
 }
 
 nav ul li:first-child {
@@ -290,9 +297,11 @@ p.recipe {
     grid-area: recipe;
     text-indent:
 }
+
 .hide {
   display: none;
 }
+
 .modal-background {
   position: fixed;
   z-index: 10;
@@ -302,14 +311,23 @@ p.recipe {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
 }
+
 .modal-content {
   background-color: #fefefe;
   border: 1px solid #7c1f17;
   margin: 1em;
   padding: 2em;
 }
-button.ratingone{
+
+button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 25px 45px;
+    background-color: inherit;
+    border: 1px solid #000;
+    font-family: "Courier";
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 100px;
 }
