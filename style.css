@@ -101,7 +101,7 @@ h1.food_name {
 }
 
 img.indeximg {
-    width: 50vw;
+    width: 60vw;
     height: auto;
     display: block;
     margin: 8vw auto 18vw auto;
@@ -271,6 +271,7 @@ img.dishimg {
     width: 80%;
     height: auto;
     grid-area: img;
+
 }
 
 h1.dish-title {
@@ -313,10 +314,12 @@ p.recipe {
 }
 
 .modal-content {
-  background-color: #fefefe;
-  border: 1px solid #7c1f17;
-  margin: 1em;
-  padding: 2em;
+  background-color: white;
+  margin: 50px;
+  padding: 50px 50px 150px 50px;
+  font-family: "Courier";
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -330,4 +333,33 @@ button {
     font-weight: 600;
     font-size: 13px;
     margin-bottom: 100px;
+}
+
+h2.rating-text {
+    font-style: normal;
+    font-size: 14px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.star {
+    color: black;
+    font-size: 2rem;
+    padding: 0 1rem; /* space out the stars */
+}
+
+.star::before {
+    content: '\2605';
+    cursor: pointer;
+}
+
+.star:hover::before {
+    /* the :hover should come first */
+    content: '\2605';
+    color: dimgrey;
+}
+
+.star.rated::before {
+    /* same here */
+    content: '\2605';
 }
