@@ -4,6 +4,11 @@ JS FOR DYNAMIC MAIN PAGE
 ==========================================
 */
 
+const modal = document.querySelector(".modal-background");
+modal.addEventListener("click", () => {
+    modal.classList.add("hide");
+})
+
 let urlParamas = new URLSearchParams(window.location.search);
 let id = urlParamas.get("id");
 console.log(id);
@@ -35,9 +40,9 @@ function showSheet(data) {
         cloneData.querySelector("p.recipe").textContent = data.gsx$recipe.$t;
         cloneData.querySelector("p.author").textContent = `Outfit Credit: ${ data.gsx$author.$t }`;
         cloneData.querySelector("p.date").textContent = data.gsx$date.$t;
-        cloneData.querySelector("p.rating1").textContent = data.gsx$rating1.$t;
-        cloneData.querySelector("p.rating2").textContent = data.gsx$rating2.$t;
-        cloneData.querySelector("p.rating3").textContent = data.gsx$rating3.$t;
+        /*        cloneData.querySelector("p.rating1").textContent = data.gsx$rating1.$t;
+                cloneData.querySelector("p.rating2").textContent = data.gsx$rating2.$t;
+                cloneData.querySelector("p.rating3").textContent = data.gsx$rating3.$t;*/
         cloneData.querySelector("p.dish-description").textContent = data.gsx$dishdescription.$t;
         cloneData.querySelector("p.description1").textContent = data.gsx$outfitdescription1.$t;
         cloneData.querySelector("p.description2").textContent = data.gsx$outfitdescription2.$t;
@@ -50,6 +55,20 @@ function showSheet(data) {
 
         //data.gsx$outfitdescription3.$t;
         //cloneData.querySelector("img.img3").src = "image/" + data.gsx$scrambledeggfashionimage.$t;
+        cloneData.querySelector("button.ratingone").addEventListener("click", () => {
+            modal.classList.remove("hide");
+            document.querySelector("p.rating").textContent = data.gsx$rating1.$t;
+        });
+        cloneData.querySelector("button.ratingtwo").addEventListener("click", () => {
+            modal.classList.remove("hide");
+            document.querySelector("p.rating").textContent = data.gsx$rating2.$t;
+        });
+        cloneData.querySelector("button.ratingthree").addEventListener("click", () => {
+            modal.classList.remove("hide");
+            document.querySelector("p.rating").textContent = data.gsx$rating3.$t;
+        });
+
+
         document.querySelector("aside").appendChild(cloneData)
 
     }
