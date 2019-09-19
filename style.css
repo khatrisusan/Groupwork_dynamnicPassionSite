@@ -80,19 +80,19 @@ h1.food_name {
     color: var(--main text color);
     font-size: 3vw;
     text-align: center;
-    margin-top: 8vw;
     font-family: "Courier";
     font-weight: 200;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 3vw;
 }
 
 img.indeximg {
-    width: 60vw;
+    width: 50vw;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 18vw;
 }
 
 img.indeximg:hover {
@@ -180,12 +180,6 @@ styling for aside section
 */
 
 
-h1.dishtitle {
-    padding: 30px;
-    margin: 20px;
-    border: 1px solid #000;
-}
-
 img.dishimg {
     width: 70%;
     height: auto;
@@ -218,8 +212,8 @@ p.description3 {
 p.recipe {
     font-family: "Courier";
     font-size: 15px;
-    text-align: center;
-    margin: 3vw;
+    text-align: left;
+    padding-right: 10vw;
 }
 
 p.rating1,
@@ -237,16 +231,23 @@ p.date {
     margin: 30px;
 }
 
+p.noun {
+    font-family: "Courier";
+    font-size: 15px;
+    text-align: justify;
+    margin: 6vw;
+}
+
 p.dish-description {
     font-family: "Courier";
     text-transform: capitalize;
     margin: 6vw;
     text-align: justify;
     margin-bottom: 15vw;
+    font-size: 13px;
 }
 
 .grid {
-
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-auto-columns: 1fr 1fr;
@@ -265,10 +266,11 @@ img.dishimg {
 
 h1.dish-title {
     grid-area: title;
-    padding-top: 9vw;
     font-family: "Courier";
     font-weight: 200;
     text-transform: uppercase;
+    padding-top: 6vw;
+    margin: 20px;
 }
 
 p.date {
