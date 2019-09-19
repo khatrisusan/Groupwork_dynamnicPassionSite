@@ -242,6 +242,7 @@ p.dish-description {
     text-transform: capitalize;
     margin: 6vw;
     text-align: justify;
+    margin-bottom: 15vw;
 }
 
 .grid {
